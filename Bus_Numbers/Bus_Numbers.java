@@ -23,11 +23,11 @@ public class Bus_Numbers{
     //for(int k=0; k<n; k++) {
     //  System.out.println(busNumbers[k]);
     //}
-    
+
     int i=0;
     int last = 0;
     ArrayList<String> results = new ArrayList<String>();
-    
+
     while(i<n){
       last = longest(busNumbers[i], busNumbers);
       if(busNumbers[i] + 1 == last){
@@ -44,7 +44,7 @@ public class Bus_Numbers{
     for(int j=0; j<results.size(); j++){
       System.out.print(results.get(j)+" ");
     }
-    
+
     io.close();
   }
   static int longest(int number, int[] numbers){
@@ -71,60 +71,60 @@ public class Bus_Numbers{
 //############## Kattio #################
 
 
-class Kattio extends PrintWriter {
-    public Kattio(InputStream i) {
-        super(new BufferedOutputStream(System.out));
-        r = new BufferedReader(new InputStreamReader(i));
-    }
-    public Kattio(InputStream i, OutputStream o) {
-        super(new BufferedOutputStream(o));
-        r = new BufferedReader(new InputStreamReader(i));
-    }
-
-    public boolean hasMoreTokens() {
-        return peekToken() != null;
-    }
-
-    public int getInt() {
-        return Integer.parseInt(nextToken());
-    }
-
-    public double getDouble() {
-        return Double.parseDouble(nextToken());
-    }
-
-    public long getLong() {
-        return Long.parseLong(nextToken());
-    }
-
-    public String getWord() {
-        return nextToken();
-    }
-
-
-
-    private BufferedReader r;
-    private String line;
-    private StringTokenizer st;
-    private String token;
-
-    private String peekToken() {
-        if (token == null)
-            try {
-                while (st == null || !st.hasMoreTokens()) {
-                    line = r.readLine();
-                    if (line == null) return null;
-                    st = new StringTokenizer(line);
-                }
-                token = st.nextToken();
-            } catch (IOException e) { }
-        return token;
-    }
-
-    private String nextToken() {
-        String ans = peekToken();
-        token = null;
-        return ans;
-    }
-}
- 
+// class Kattio extends PrintWriter {
+//     public Kattio(InputStream i) {
+//         super(new BufferedOutputStream(System.out));
+//         r = new BufferedReader(new InputStreamReader(i));
+//     }
+//     public Kattio(InputStream i, OutputStream o) {
+//         super(new BufferedOutputStream(o));
+//         r = new BufferedReader(new InputStreamReader(i));
+//     }
+//
+//     public boolean hasMoreTokens() {
+//         return peekToken() != null;
+//     }
+//
+//     public int getInt() {
+//         return Integer.parseInt(nextToken());
+//     }
+//
+//     public double getDouble() {
+//         return Double.parseDouble(nextToken());
+//     }
+//
+//     public long getLong() {
+//         return Long.parseLong(nextToken());
+//     }
+//
+//     public String getWord() {
+//         return nextToken();
+//     }
+//
+//
+//
+//     private BufferedReader r;
+//     private String line;
+//     private StringTokenizer st;
+//     private String token;
+//
+//     private String peekToken() {
+//         if (token == null)
+//             try {
+//                 while (st == null || !st.hasMoreTokens()) {
+//                     line = r.readLine();
+//                     if (line == null) return null;
+//                     st = new StringTokenizer(line);
+//                 }
+//                 token = st.nextToken();
+//             } catch (IOException e) { }
+//         return token;
+//     }
+//
+//     private String nextToken() {
+//         String ans = peekToken();
+//         token = null;
+//         return ans;
+//     }
+// }
+//  
